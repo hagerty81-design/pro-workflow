@@ -1,0 +1,11 @@
+{
+  "name": "pro-workflow",
+  "version": "1.0.0",
+  "description": "Expert Claude Code workflow for amateur and pro developers. Auto-format hooks, security gates, guided Plan Mode, and beginner onboarding.",
+  "author": {
+    "name": "Chris O'Toole"
+  },
+  "keywords": ["workflow", "onboarding", "hooks", "vibe-coding", "beginner", "pro"],
+  "skills": "skills",
+  "hooks": "hooks"
+}

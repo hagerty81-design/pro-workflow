@@ -1,0 +1,41 @@
+{
+  "hooks": {
+    "PostToolUse": [
+      {
+        "matcher": "Edit|MultiEdit|Write",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "npx prettier --write \"$TOOL_INPUT_FILE_PATH\" 2>/dev/null; exit 0",
+            "timeout": 15,
+            "statusMessage": "Auto-formatting..."
+          }
+        ]
+      }
+    ],
+    "PreToolUse": [
+      {
+        "matcher": "Bash",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "node -e \"const d=JSON.parse(require('fs').readFileSync('/dev/stdin','utf8'));const c=(d.tool_input&&d.tool_input.command)||'';if(/rm\\s+-rf\\s+[\\/~]|drop\\s+table|truncate\\s+table|:(){ :|:& };:/i.test(c)){process.stderr.write('BLOCKED: Destructive command detected -- use Plan Mode to review first.');process.exit(2)}\"",
+            "timeout": 5,
+            "statusMessage": "Security check..."
+          }
+        ]
+      },
+      {
+        "matcher": "Bash",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "node -e \"const d=JSON.parse(require('fs').readFileSync('/dev/stdin','utf8'));const c=(d.tool_input&&d.tool_input.command)||'';if(/git\\s+add.*\\.(env|pem|key|secret|credentials|p12|pfx|jks)|git\\s+add\\s+-A|git\\s+add\\s+\\./i.test(c)){process.stderr.write('BLOCKED: Staging sensitive files or using broad git add. Stage specific files instead.');process.exit(2)}\"",
+            "timeout": 5,
+            "statusMessage": "Checking for secrets..."
+          }
+        ]
+      }
+    ]
+  }
+}
