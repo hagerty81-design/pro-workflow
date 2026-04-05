@@ -3,9 +3,8 @@ name: setup
 description: "Guided first-time setup for new Claude Code users. Walks through creating CLAUDE.md, understanding Plan Mode, and testing hooks. Type /setup to begin. Optionally pass your tech stack: /setup react"
 user-invocable: true
 disable-model-invocation: true
-allowed-tools: [Read, Write, Glob, Grep, Bash]
+allowed-tools: Read Write Glob Grep Bash
 argument-hint: "[tech-stack]"
-version: "1.0.0"
 ---
 
 # Guided Onboarding for New Claude Code Users

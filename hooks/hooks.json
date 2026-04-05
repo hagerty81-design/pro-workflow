@@ -6,7 +6,7 @@
         "hooks": [
           {
             "type": "command",
-            "command": "npx prettier --write \"$TOOL_INPUT_FILE_PATH\" 2>/dev/null; exit 0",
+            "command": "node -e \"const d=JSON.parse(require('fs').readFileSync('/dev/stdin','utf8'));const f=(d.tool_input&&(d.tool_input.file_path||d.tool_input.filePath))||'';if(f&&/\\.(js|ts|jsx|tsx|css|json|md|html|vue|svelte)$/i.test(f)){require('child_process').execSync('npx prettier --write '+JSON.stringify(f),{stdio:'ignore'})}\" 2>/dev/null; exit 0",
             "timeout": 15,
             "statusMessage": "Auto-formatting..."
           }

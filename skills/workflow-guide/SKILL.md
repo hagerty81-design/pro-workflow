@@ -3,7 +3,6 @@ name: workflow
 description: "Print the pro workflow quick-reference card. Use when user types /workflow or asks about commands, shortcuts, or how to use Claude Code effectively."
 user-invocable: true
 disable-model-invocation: true
-version: "1.0.0"
 ---
 
 When the user invokes /workflow, print the following reference card exactly. Do not add commentary or explanation beyond what is listed. Do not include any commands that are not listed here -- these are all verified and real.

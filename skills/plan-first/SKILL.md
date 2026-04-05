@@ -2,8 +2,6 @@
 name: plan-first
 description: "When the user asks for a large feature, refactor, or multi-file change that would touch 3 or more files, suggest using Plan Mode before executing. Triggers automatically on large-scope tasks."
 user-invocable: false
-disable-model-invocation: false
-version: "1.0.0"
 ---
 
 # Plan-First Guardrail
