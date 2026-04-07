@@ -1,0 +1,17 @@
+{
+  "name": "pro-workflow",
+  "owner": {
+    "name": "Chris O'Toole"
+  },
+  "plugins": [
+    {
+      "name": "pro-workflow",
+      "description": "Expert Claude Code workflow for amateur and pro developers. Auto-format hooks, security gates, guided Plan Mode, and beginner onboarding.",
+      "version": "1.0.0",
+      "source": ".",
+      "author": {
+        "name": "Chris O'Toole"
+      }
+    }
+  ]
+}
