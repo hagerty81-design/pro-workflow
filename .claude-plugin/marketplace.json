@@ -8,7 +8,10 @@
       "name": "pro-workflow",
       "description": "Expert Claude Code workflow for amateur and pro developers. Auto-format hooks, security gates, guided Plan Mode, and beginner onboarding.",
       "version": "1.0.0",
-      "source": ".",
+      "source": {
+        "source": "github",
+        "repo": "hagerty81-design/pro-workflow"
+      },
       "author": {
         "name": "Chris O'Toole"
       }
