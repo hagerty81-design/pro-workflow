@@ -8,6 +8,5 @@
   "license": "MIT",
   "repository": "https://github.com/O2leGit/pro-workflow",
   "keywords": ["workflow", "onboarding", "hooks", "vibe-coding", "beginner", "pro"],
-  "skills": "./skills/",
-  "hooks": "./hooks/hooks.json"
+  "skills": "./skills/"
 }
